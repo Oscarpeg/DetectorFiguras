@@ -1,35 +1,4 @@
-# Detector de Figuras Geométricas
 
-**Universidad Sergio Arboleda**  
-**Materia:** Procesamiento Digital de Imágenes  
-**Profesor:** Hernan Cruz Bueno  
-**Estudiante:** Oscar Mauricio Peñuela  
-
----
-
-## Descripción
-
-Detección y clasificación de figuras geométricas en tiempo real.  
-Todo implementado manualmente desde cero (sin funciones automáticas de OpenCV).
-
-### Pipeline
-
-```
-Cámara → Grises → Canny Manual → Cierre Morfológico → Dilatación
-    → Contornos (Moore Tracing) → Graham Scan → Douglas-Peucker → Clasificar
-```
-
-### Algoritmos implementados a mano
-
-| Algoritmo | Descripción |
-|---|---|
-| Convolución 2D | 4 for anidados, zero-padding |
-| Canny | 5 etapas: Gauss, Sobel, NMS, Double Threshold, Hysteresis |
-| Dilatación / Erosión | Morfología manual pixel por pixel |
-| Cierre Morfológico | Dilatación + Erosión (cierra huecos) |
-| Moore Boundary Tracing | Seguimiento de borde con 8-vecinos |
-| Graham Scan | Convex Hull: pivote, ángulo polar, producto cruz |
-| Douglas-Peucker | Simplificación de polígonos (detecta esquinas reales) |
 
 ### Figuras detectadas
 
